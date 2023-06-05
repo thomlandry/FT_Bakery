@@ -5,21 +5,25 @@
    Maio/2015
 */
 
+#ifndef A02EX03_F_H
+   #define A02EX03_F_H
+
 #include <string>
 #include "a02ex03_b.hpp"
-#include "a02ex03_c.hpp"
 
 using namespace std;
 
-Bread::Bread(string tipo, float peso, double valor) : Food(valor)
+class Cheese : public Food
    {
-   this->tipo = tipo;
-   this->peso = peso;
+   private:
+      string tipo;
+      float peso;
+      
+   public:
+      Cheese(string, float, double);
+      virtual string getDescricao();
    };
    
-string Bread::getDescricao()
-   { 
-   return ("Pao " + tipo + " - " + to_string(peso) + " Kg."); 
-   };
+#endif
    
 /* fim de arquivo */

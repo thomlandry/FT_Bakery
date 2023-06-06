@@ -7,19 +7,19 @@
 
 #include <string>
 #include "a02ex03_b.hpp"
-#include "a02ex03_d.hpp"
+#include "a02ex03_f.hpp"
 
 using namespace std;
 
-Cracker::Cracker(string tipo, int unidades, double valor) : Food(valor)
+Cheese::Cheese(string tipo, float peso, double valor) : Food(valor)
    {
-   this->tipo     = tipo;
-   this->unidades = unidades;
+   this->tipo = tipo;
+   this->peso = peso;
    };
    
-string Cracker::getDescricao()
+string Cheese::getDescricao()
    { 
-   return ("Bolacha " + tipo + " - " + to_string(unidades) + " un/pacote."); 
+   return ("Queijo " + tipo + " - " + to_string(peso) + " Kg."); 
    };
    
 /* fim de arquivo */

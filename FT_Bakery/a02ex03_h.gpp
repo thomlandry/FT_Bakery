@@ -1,0 +1,18 @@
+//IMPLEMENTAÇÃO CONSTRUTOR E DESCRIÇAO DE WATER
+
+#include <string>
+#include "a02ex03_f.hpp"
+#include "a02ex03_h.hpp"
+
+using namespace std;
+
+Water::Water(string tipo, int unidades, double valor) : Liquid(valor)
+   {
+   this->tipo     = tipo;
+   this->unidades = unidades;
+   };
+   
+string Water::getDescricao()
+   { 
+   return ("Água " + tipo + " - " + to_string(unidades) + " un/pacote."); 
+   };

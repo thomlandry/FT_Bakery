@@ -1,3 +1,4 @@
+
 //IMPLEMENTAÇÃO CONSTRUTOR E DESCRIÇAO DE MILK
 
 #include <string>
@@ -17,3 +18,16 @@ string Milk::getDescricao()
    return ("Leite " + tipo + " - " + to_string(unidades) + " un/pacote."); 
    };
    
+
+CottageCheese::CottageCheese(string tipo, string recheio, int unidades, double valor) : Cheese(tipo, unidades, valor)
+   {
+   this->recheio = recheio;
+   };
+   
+string CottageCheese::getDescricao()
+   { 
+   return ("Bolacha Recheada com " + recheio + " - " + Cheese::getDescricao()); 
+   };
+   
+/* fim de arquivo */
+
